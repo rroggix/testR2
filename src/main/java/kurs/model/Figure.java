@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public  class Figure {
+public class Figure {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
