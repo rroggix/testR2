@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="yourname">
+        <createTable tableName="figure">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="typ" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="param1" type="DOUBLE"/>
+            <column name="param2" type="DOUBLE"/>
+            <column name="param3" type="DOUBLE"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
