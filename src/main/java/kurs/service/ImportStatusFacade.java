@@ -16,7 +16,6 @@ public class ImportStatusFacade {
 
     private final ImportStatusRepository importStatusRepository;
 
-
     public ImportStatus saveAndFlush(ImportStatus importStatus) {
         return importStatusRepository.saveAndFlush(importStatus);
     }
@@ -56,5 +55,4 @@ public class ImportStatusFacade {
         toUpdate.setFailedReason(message);
         importStatusRepository.saveAndFlush(toUpdate);
     }
-
 }
