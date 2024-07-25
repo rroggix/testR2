@@ -14,11 +14,12 @@ public class AsyncConfig {
     @Bean(name = "figuresImportExecutor")
     public Executor figuresImportExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(2);
-        executor.setMaxPoolSize(5);
+        executor.setCorePoolSize(4);
+        executor.setMaxPoolSize(10);
         executor.setQueueCapacity(500);
         executor.setThreadNamePrefix("FiguresImport-");
         executor.initialize();
         return executor;
     }
 }
+
