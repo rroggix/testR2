@@ -1,14 +1,13 @@
 package kurs.service;
 
+import kurs.model.ImportStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.annotation.Isolation;
-
-import kurs.model.ImportStatus;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -69,7 +68,8 @@ public class ImportService {
         String type = args[0];
         switch (type) {
             case "KWADRAT", "KOLO" -> jdbcTemplate.update(INSERT_FIGURE_SQL, type, Integer.parseInt(args[1]), null);
-            case "PROSTOKAT" -> jdbcTemplate.update(INSERT_FIGURE_SQL, type, Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+            case "PROSTOKAT" ->
+                    jdbcTemplate.update(INSERT_FIGURE_SQL, type, Integer.parseInt(args[1]), Integer.parseInt(args[2]));
             default -> throw new IllegalArgumentException("Unknown figure type: " + type);
         }
     }
