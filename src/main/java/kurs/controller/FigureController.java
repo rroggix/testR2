@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("api/figures")
+@RequestMapping("api/figure")
 @Slf4j
 @RequiredArgsConstructor
 public class FigureController {

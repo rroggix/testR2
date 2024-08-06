@@ -5,108 +5,108 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="author">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="figure"/>
-            </not>
-        </preConditions>
-        <createTable tableName="figure">
-            <column name="id" type="INT">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="typ" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+<changeSet id="1" author="author">
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="figure"/>
+        </not>
+    </preConditions>
+    <createTable tableName="figure">
+        <column name="id" type="INT">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="typ" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
 
-    <changeSet id="2" author="author">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="circle"/>
-            </not>
-        </preConditions>
-        <createTable tableName="circle">
-            <column name="id" type="INT">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="typ" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="radius" type="INT">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+<changeSet id="2" author="author">
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="circle"/>
+        </not>
+    </preConditions>
+    <createTable tableName="circle">
+        <column name="id" type="INT">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="typ" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="radius" type="INT">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
 
-    <changeSet id="3" author="author">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="square"/>
-            </not>
-        </preConditions>
-        <createTable tableName="square">
-            <column name="id" type="INT">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="typ" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="side" type="INT">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+<changeSet id="3" author="author">
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="square"/>
+        </not>
+    </preConditions>
+    <createTable tableName="square">
+        <column name="id" type="INT">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="typ" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="side" type="INT">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
 
-    <changeSet id="4" author="author">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="rectangle"/>
-            </not>
-        </preConditions>
-        <createTable tableName="rectangle">
-            <column name="id" type="INT">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="typ" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="length" type="INT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="width" type="INT">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+<changeSet id="4" author="author">
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="rectangle"/>
+        </not>
+    </preConditions>
+    <createTable tableName="rectangle">
+        <column name="id" type="INT">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="typ" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="length" type="INT">
+            <constraints nullable="false"/>
+        </column>
+        <column name="width" type="INT">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
 
-    <changeSet id="5" author="author">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="import_status"/>
-            </not>
-        </preConditions>
-        <createTable tableName="import_status">
-            <column name="id" type="INT" autoIncrement="true">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-            <column name="submit_date" type="TIMESTAMP">
-                <constraints nullable="false"/>
-            </column>
-            <column name="start_date" type="TIMESTAMP"/>
-            <column name="status" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="finish_date" type="TIMESTAMP"/>
-            <column name="failed_reason" type="VARCHAR(255)"/>
-            <column name="processed" type="INT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="file_name" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+<changeSet id="5" author="author">
+    <preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="import_status"/>
+        </not>
+    </preConditions>
+    <createTable tableName="import_status">
+        <column name="id" type="INT" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="submit_date" type="TIMESTAMP">
+            <constraints nullable="false"/>
+        </column>
+        <column name="start_date" type="TIMESTAMP"/>
+        <column name="status" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="finish_date" type="TIMESTAMP"/>
+        <column name="failed_reason" type="VARCHAR(255)"/>
+        <column name="processed" type="INT">
+            <constraints nullable="false"/>
+        </column>
+        <column name="file_name" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
 
 </databaseChangeLog>
